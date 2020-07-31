@@ -7,9 +7,24 @@
              x:Class="VagasAPP.Pages.AddVagaPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry Placeholder="Vaga - Cargo"/>
+            <Entry Placeholder="Quantidade"/>
+            <Entry Placeholder="Cidade"/>
+            <Entry Placeholder="Empresa" />
+            <Entry Placeholder="Salario"/>
+            <Editor Placeholder="Descrição" HeightRequest="200"/> <!--Pode ser q de erro na propriedade placeholder-->
+            
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Tipo de contratação"/>
+                <Label Text="CLT"/>
+                <Switch />
+                <Label Text="PJ"/>
+            </StackLayout>
+
+            <Entry Placeholder="Telefone" />
+            <Entry Placeholder="Email" />
+
+            <Button Text="Salvar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
