@@ -1,4 +1,5 @@
 ﻿using System;
+using VagasAPP.Pages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,7 +8,7 @@ namespace VagasAPP {
         public App() {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ListVagasPage());
         }
 
         protected override void OnStart() {
