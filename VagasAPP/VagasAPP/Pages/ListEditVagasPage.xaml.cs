@@ -13,5 +13,14 @@ namespace VagasAPP.Pages {
         public ListEditVagasPage() {
             InitializeComponent();
         }
+
+        private void OnEditClicked(object sender, EventArgs args) {
+
+        }
+
+        private void OnDeleteClicked(object sender, EventArgs args) {
+
+        }
+
     }
 }
