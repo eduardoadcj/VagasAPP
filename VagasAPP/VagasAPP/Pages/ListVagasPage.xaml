@@ -18,6 +18,9 @@
                 <Label Text="Encontre seu emprego aqui" FontSize="12"/>
             </StackLayout>
 
+            <Entry Placeholder="Pesquisar..."/>
+            <Label Text="Vagas encontradas"/>
+
             <ListView>
                 <ListView.ItemTemplate>
                     <DataTemplate>
