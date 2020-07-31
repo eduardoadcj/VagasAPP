@@ -13,5 +13,18 @@ namespace VagasAPP.Pages {
         public ListVagasPage() {
             InitializeComponent();
         }
+
+        private void GoCadastro(object sender, EventArgs args) {
+
+        }
+
+        private void GoMinhasVagas(object sender, EventArgs args) {
+
+        }
+
+        private void OnDetalhesClicked(object sender, EventArgs args) {
+
+        }
+
     }
 }

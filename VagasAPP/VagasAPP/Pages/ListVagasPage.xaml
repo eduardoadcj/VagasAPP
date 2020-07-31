@@ -8,6 +8,45 @@
     <ContentPage.Content>
         <StackLayout>
             
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Adicionar" Clicked="GoCadastro"/>
+                <Button Text="Minhas vagas" Clicked="GoMinhasVagas"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Vagas" FontSize="24"/>
+                <Label Text="Encontre seu emprego aqui" FontSize="12"/>
+            </StackLayout>
+
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Column="0" Text="{Binding Nome}" FontAttributes="Bold"/>
+                            <Label Grid.Column="0" Text="{Binding Empresa}"/>
+                            <Label Grid.Column="0" Text="{Binding Cidade}"/>
+
+                            <Label Text="+Detalhe">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnDetalhesClicked" CommandParameter="{Binding .}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            
+                        </Grid>
+                    </DataTemplate>    
+                </ListView.ItemTemplate>
+            </ListView>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
