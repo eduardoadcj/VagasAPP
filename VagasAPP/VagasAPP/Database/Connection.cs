@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using VagasAPP.Model;
 using Xamarin.Forms;
 
 namespace VagasAPP.Database {

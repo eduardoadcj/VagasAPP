@@ -1,9 +1,15 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace VagasAPP.Model {
+    
+    [Table("vaga")]
     public class Vaga {
+
+        [PrimaryKey, AutoIncrement]
+        public int id { get; set; }
         
         public string Nome { get; set; }
         public short Vagas { get; set; }
@@ -15,4 +21,5 @@ namespace VagasAPP.Model {
         public string Email { get; set; }
 
     }
+
 }
