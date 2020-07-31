@@ -39,7 +39,7 @@
                             <Label Grid.Column="0" Text="{Binding Empresa}"/>
                             <Label Grid.Column="0" Text="{Binding Cidade}"/>
 
-                            <Label Text="+Detalhe">
+                            <Label Text="+Detalhe" Grid.Column="0">
                                 <Label.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="OnDetalhesClicked" CommandParameter="{Binding .}"/>
                                 </Label.GestureRecognizers>
