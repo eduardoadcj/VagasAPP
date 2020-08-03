@@ -6,50 +6,52 @@
              mc:Ignorable="d"
              x:Class="VagasAPP.Pages.ListVagasPage">
     <ContentPage.Content>
-        <StackLayout>
-            
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Adicionar" Clicked="GoCadastro"/>
-                <Button Text="Minhas vagas" Clicked="GoMinhasVagas"/>
-            </StackLayout>
+        <StackLayout Padding="10">
 
             <StackLayout Orientation="Horizontal">
                 <Label Text="Vagas" FontSize="24"/>
                 <Label Text="Encontre seu emprego aqui" FontSize="12"/>
             </StackLayout>
 
-            <Entry Placeholder="Pesquisar..."/>
-            <Label Text="Vagas encontradas"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Adicionar" Clicked="GoCadastro"/>
+                <Button Text="Minhas vagas" Clicked="GoMinhasVagas"/>
+            </StackLayout>
 
-            <ListView>
+            <Entry x:Name="SearchFieldVagas" TextChanged="OnSearch" Placeholder="Pesquisar..."/>
+            <Label x:Name="CountLabel"/>
+
+            <ListView x:Name="ListViewVagas">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="100"/>
+                                </Grid.ColumnDefinitions>
 
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="100"/>
-                            </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
 
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+                                <Label Grid.Column="0" Grid.Row="0" Text="{Binding Nome}" FontAttributes="Bold"/>
+                                <Label Grid.Column="0" Grid.Row="1" Text="{Binding Empresa}"/>
+                                <Label Grid.Column="0" Grid.Row="2" Text="{Binding Cidade}"/>
 
-                            <Label Grid.Column="0" Text="{Binding Nome}" FontAttributes="Bold"/>
-                            <Label Grid.Column="0" Text="{Binding Empresa}"/>
-                            <Label Grid.Column="0" Text="{Binding Cidade}"/>
-
-                            <Label Text="+Detalhe" Grid.Column="0">
-                                <Label.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="OnDetalhesClicked" CommandParameter="{Binding .}"/>
-                                </Label.GestureRecognizers>
-                            </Label>
-                            
-                        </Grid>
-                    </DataTemplate>    
+                                <Label Text="+Detalhe" Grid.Column="1" Grid.Row="1">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnDetalhesClicked" CommandParameter="{Binding .}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

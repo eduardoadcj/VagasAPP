@@ -12,7 +12,7 @@ namespace VagasAPP.Model {
         public int id { get; set; }
         
         public string Nome { get; set; }
-        public short Vagas { get; set; }
+        public short Quantidade { get; set; }
         public string Cidade { get; set; }
         public double Salario { get; set; }
         public string Descricao { get; set; }
