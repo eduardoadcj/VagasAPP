@@ -21,7 +21,7 @@
             <Entry x:Name="SearchFieldVagas" TextChanged="OnSearch" Placeholder="Pesquisar..."/>
             <Label x:Name="CountLabel"/>
 
-            <ListView x:Name="ListViewVagas">
+            <ListView x:Name="ListViewVagas" HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

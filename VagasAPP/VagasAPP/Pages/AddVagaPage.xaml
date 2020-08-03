@@ -6,25 +6,27 @@
              mc:Ignorable="d"
              x:Class="VagasAPP.Pages.AddVagaPage">
     <ContentPage.Content>
-        <StackLayout Padding="10">
-            <Entry x:Name="Nome" Placeholder="Vaga - Cargo"/>
-            <Entry x:Name="Quantidade" Placeholder="Quantidade"/>
-            <Entry x:Name="Cidade" Placeholder="Cidade"/>
-            <Entry x:Name="Empresa" Placeholder="Empresa" />
-            <Entry x:Name="Salario" Placeholder="Salario"/>
-            <Editor x:Name="Descricao" Placeholder="Descrição" HeightRequest="200"/> <!--Pode ser q de erro na propriedade placeholder-->
-            
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Tipo de contratação"/>
-                <Label Text="CLT"/>
-                <Switch x:Name="Tipo" />
-                <Label Text="PJ"/>
+        <ScrollView>
+            <StackLayout Padding="10">
+                <Entry x:Name="Nome" Placeholder="Vaga - Cargo"/>
+                <Entry x:Name="Quantidade" Placeholder="Quantidade"/>
+                <Entry x:Name="Cidade" Placeholder="Cidade"/>
+                <Entry x:Name="Empresa" Placeholder="Empresa" />
+                <Entry x:Name="Salario" Placeholder="Salario"/>
+                <Editor x:Name="Descricao" Placeholder="Descrição" HeightRequest="200"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Tipo de contratação"/>
+                    <Label Text="CLT"/>
+                    <Switch x:Name="Tipo" />
+                    <Label Text="PJ"/>
+                </StackLayout>
+
+                <Entry x:Name="Telefone" Placeholder="Telefone" />
+                <Entry x:Name="Email" Placeholder="Email" />
+
+                <Button Text="Salvar" Clicked="AttemptSave"/>
             </StackLayout>
-
-            <Entry x:Name="Telefone" Placeholder="Telefone" />
-            <Entry x:Name="Email" Placeholder="Email" />
-
-            <Button Text="Salvar" Clicked="AttemptSave"/>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
