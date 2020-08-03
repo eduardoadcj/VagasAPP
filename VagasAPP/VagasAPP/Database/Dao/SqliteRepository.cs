@@ -20,7 +20,7 @@ namespace VagasAPP.Database {
         }
 
         public void Delete(T obj) {
-            con.Delete<T>(obj);
+            con.Delete(obj);
         }
 
         public void Update(T obj) {
